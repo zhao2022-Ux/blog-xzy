@@ -8,6 +8,7 @@ menu:
     友人帐: /link/ || icon-lianjie || faa-tada
   关于 || icon-shejiaoxinxi || faa-tada || hide:
     即刻短文: /essay/ || icon-pjh-duanwenbentuijian || faa-tada
+    联系我: /about/ || icon-shejiaoxinxi || faa-tada
 highlight_theme: mac
 highlight_copy: true
 highlight_lang: true
@@ -162,6 +163,7 @@ cover:
     - https://sourcebucket.s3.bitiful.net/img/default_cover_98.webp
     - https://sourcebucket.s3.bitiful.net/img/default_cover_99.webp
     - https://sourcebucket.s3.bitiful.net/img/default_cover_100.webp
+
 error_404:
   enable: true
   subtitle: 此页面不存在哦٩͡[๏̯͡๏]
@@ -233,11 +235,14 @@ addtoany:
   enable: false
   item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 comments:
-  use: Twikoo
+  use: Artalk
   text: true
   lazyload: true
   count: false
   card_post_count: false
+artalk:
+  site: 'blog'
+  server: https://artalk.xzy404.me  
 disqus:
   shortname: null
   apikey: null
@@ -507,7 +512,8 @@ aside:
       link: https://mugu.zhaohonghao-qwq.com/
   card_announcement:
     enable: true
-    content: <center>Built by heishao, used by xzy.</center>
+    content: <center>Built by heishao, used by xzy.</center> <center>感谢 ed-builder 提供的服务器以构建说说，感谢 haofafa 提供的服务器以构建 artalk 评论</center><center>评论加载不出来就刷新</center>
+      
   card_recent_post:
     enable: false
     limit: 3
@@ -549,7 +555,7 @@ runtimeshow:
   enable: false
   publish_date: 4/13/2025 00:00:00
 newest_comments:
-  enable: true
+  enable: false
   sort_order: null
   limit: 5
   storage: 10
@@ -745,10 +751,10 @@ wowjs:
 envelope_comment:
   enable: true
   custom_pic:
-    cover: https://tuchuang.voooe.cn/images/2023/01/02/violet.webp
-    line: https://tuchuang.voooe.cn/images/2023/01/02/line.webp
-    beforeimg: https://tuchuang.voooe.cn/images/2023/01/02/before.webp
-    afterimg: https://tuchuang.voooe.cn/images/2023/01/02/after.webp
+    cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg 
+    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png 
+    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png 
+    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png 
   message:
     - 本站有哪些做得好或者不好的地方？
     - 或者你有什么改进的建议？
@@ -783,3 +789,25 @@ tag_plugins:
 index_card_style: multicard
 lantern:
   enable: false
+
+# electric_clock
+# see https://anzhiy.cn/posts/fc18.html
+electric_clock:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  exclude:
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: class
+    name: sticky_layout
+    index: 0
+  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.js
+  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+  qweather_key:  # 和风天气key
+  gaud_map_key:  # 高得地图web服务key
+  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+  rectangle: 112.6534116,27.96920845 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置

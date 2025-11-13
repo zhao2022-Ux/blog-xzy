@@ -33,7 +33,7 @@ block content
 
     if page.comments !== false && theme.comments && theme.comments.use
       - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
+      !=partial('includes/third-party/comments/artalk', {}, {cache: false})
 
     if theme.indieweb.enable && theme.indieweb.webmention.enable && page.webmention !== false
       !=partial('includes/third-party/webmention', {}, {cache: true})   
